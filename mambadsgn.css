@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', monospace;
+}
+.kepes{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(hatterkep.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+}
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 130px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 8px 12px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:black;
+}
+.elerhetoseg{
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    align-content: right;
+}
+.bejelentkezes{
+    
+}

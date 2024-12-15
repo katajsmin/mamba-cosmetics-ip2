@@ -1,0 +1,25 @@
+weboldal design
+frontend kisebb weblapok
+backend adatkezelés
+
+frontend:
+	egy alapszín
+	logók
+	gombok
+	header
+	lábléc
+
+yt linkek:
+https://www.youtube.com/watch?v=yU_JgeAIRko&list=PLjwm_8O3suyOwElnplQ3quKEHsOuHyP9R
+https://www.youtube.com/watch?v=CTjbDom7wKQ&list=PLjwm_8O3suyOwElnplQ3quKEHsOuHyP9R&index=3
+https://www.youtube.com/watch?v=iIRJJ9T8D88&list=PLjwm_8O3suyOwElnplQ3quKEHsOuHyP9R&index=5
+https://www.youtube.com/watch?v=Em2c7KcWcxs&list=PLjwm_8O3suyOwElnplQ3quKEHsOuHyP9R&index=20
+https://www.youtube.com/watch?v=Rtf42_Bp-Fo&list=PLjwm_8O3suyOwElnplQ3quKEHsOuHyP9R&index=33
+https://youtu.be/O6mSoDVnmBY?si=QNTftfaDjJxIzdoP
+https://www.youtube.com/watch?v=w4dL_8-kVEs&list=PLdE8ESr9Th_uU8IAMv4MQDAsD0z7Aj4hr
+https://www.youtube.com/watch?v=HejxlwwOeq0&list=PLSJxovi1IyDH-pPIe0OF0z_mW-WVdhmhx&index=9
+https://www.youtube.com/watch?v=wHFflWvii3M
+
+c#
+https://www.youtube.com/watch?v=wpk2q5zOIG0&list=PLs5n5nYB22fLNFVzynXywEydlRb6DUot_&index=2
+

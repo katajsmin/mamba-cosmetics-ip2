@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mambacss.css" >
+    <link rel="stylesheet" href="termekekcss.css" >
+    <title>MAMBA Cosmetics - Termékek</title>
+    <style>
+        
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.2s; 
+        }
+        .product:hover {
+        transform: scale(1.05); 
+    }
+        
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 2px solid #000000;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0; /* Kezdetben átlátszó */
+            transition: opacity 0.3s ease; /* Áttűnési effektus */
+            text-align: center;
+        }
+        #close-popup {
+    background-color: black; /* Fekete háttér */
+    color: white; /* Fehér szöveg */
+    border: none; /* Nincs keret */
+    border-radius: 5px; /* Kerekített sarkok */
+    padding: 10px 20px; /* Tágasabb belső tér */
+    cursor: pointer; /* Mutató kéz */
+    transition: background-color 0.3s; /* Áttűnés a háttérszínre */
+}
+
+#close-popup:hover {
+    background-color: darkgray; /* Sötétebb szín, amikor fölé viszik az egeret */
+}
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            opacity: 0; /* Kezdetben átlátszó */
+        transition: opacity 0.3s ease; /* Áttűnési effektus */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mambacosm.html">Kezdőlap</a></li>
+                <li><a href="termekeink.html">Termékeink</a></li>
+                <li><a href="bejelentkezes.html">Bejelentkezés</a></li>
+                <li><a href="ajanlatok.html">Ajánlatok</a></li>
+            </ul>
+        </nav>
+        <div class="socials">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"class="responsive"/></a>
+            <a href="#"><img src="pinterest-icon.png" alt="Pinterest" class="responsive"/></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram" class="responsive"/></a>
+            <a href="#"><img src="man_icon.png" alt="Instagram" class="responsive"/></a>
+        </div>
+    </header>
+    <main>
+        <h1>Termékek</h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="product1.jpg" alt="Termék 1">
+                <h2>Hidratáló Krém</h2>
+                <p>Ár: 4,990 Ft</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Termék 2">
+                <h2>Ránctalanító Szérum</h2>
+                <p>Ár: 7,990 Ft</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Termék 3">
+                <h2>Napvédő Krém</h2>
+                <p>Ár: 5,490 Ft</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="product4.jpg" alt="Termék 4">
+                <h2>Éjszakai Krém</h2>
+                <p>Ár: 6,490 Ft</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+        </div>
+         <!-- Sötét háttér -->
+    <div id="overlay"></div>
+
+    <!-- Előugró ablak -->
+    <div id="popup">
+        <p>A terméket a kosárba tetted!</p>
+        <button id="close-popup">Bezár</button>
+    </div>
+        <div class="product-list">
+            <div class="product">
+                <img src="perfume1.jpg" alt="Parfüm 1">
+                <h2>Elegant Essence</h2>
+                <p>Ár: 9,990 Ft</p>
+                <p>Egységár: 1,999 Ft/50 ml</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="perfume2.jpg" alt="Parfüm 2">
+                <h2>Floral Dream</h2>
+                <p>Ár: 8,490 Ft</p>
+                <p>Egységár: 1,698 Ft/50 ml</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="perfume3.jpg" alt="Parfüm 3">
+                <h2>Ocean Breeze</h2>
+                <p>Ár: 7,490 Ft</p>
+                <p>Egységár: 1,498 Ft/50 ml</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="perfume4.jpg" alt="Parfüm 4">
+                <h2>Spicy Affair</h2>
+                <p>Ár: 10,490 Ft</p>
+                <p>Egységár: 2,098 Ft/50 ml</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        const buttons = document.querySelectorAll('.add-to-cart');
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('overlay');
+        const closeButton = document.getElementById('close-popup');
+    
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                overlay.style.display = 'block';
+                popup.style.display = 'block';
+    
+                // Áttűnés
+                setTimeout(() => {
+                    overlay.style.opacity = '1';
+                    popup.style.opacity = '1';
+                }, 10); // Rövid időzítés, hogy az átmenet elinduljon
+            });
+        });
+    
+        const closePopup = () => {
+            overlay.style.opacity = '0';
+            popup.style.opacity = '0';
+    
+            // Utolsó eltüntetés
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                popup.style.display = 'none';
+            }, 300); // Ugyanannyi idő, mint az áttűnés
+        };
+    
+        closeButton.addEventListener('click', closePopup);
+        overlay.addEventListener('click', closePopup);
+    </script>
+    
+    </script>
+</body>    
+    

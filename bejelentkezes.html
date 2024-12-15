@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mambalog.css">
+    <title>MAMBA Cosmetics - Bejelentkezés</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-tarolo regisztracio">
+            <form action="mambacosm.html" method="get">
+                <h1>Regisztráció</h1>
+                <div class="social-ikonok">
+                    <a class="ikon"><i class=""></i></a>
+                    <a class="ikon"><i class=""></i></a>
+                    <a class="ikon" href="logo.jpeg"><i class=""></i></a>
+                </div>
+                
+                <input type="text" placeholder="Név" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Jelszó" required>
+                <button type="submit">Regisztrálok</button>
+            </form>
+        </div>
+        <div class="form-tarolo bejelentkezes">
+            <form>
+                <h1>Bejelentkezés</h1>
+                <div class="social-ikonok">
+                    <a class="ikon"><i class=""></i></a>
+                    <a class="ikon"><i class=""></i></a>
+                    <a class="ikon" href="logo.jpeg"><i class=""></i></a>
+                </div>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Jelszó" required>
+                <a href="#">Elfelejtett jelszó</a>
+                <button>Bejelentkezés</button>
+            </form>
+        </div>
+        <div class="kapcsolo-tarolo">
+            <div class="kapcsolo">
+                <div class="kapcsolo-panel kapcsolo-bal">
+                    <h1>Szia!</h1>
+                    <p>Kérlek jelentkezz be a fiókodba a vásárláshoz!</p>
+                    <button class="rejtett" id="bejelentkezes">Bejelentkezés</button>
+                </div>
+                <div class="kapcsolo-panel kapcsolo-jobb">
+                    <h1>Szia!</h1>
+                    <p>Regisztrálj egy új fiókot a vásárláshoz!</p>
+                    <button class="rejtett" id="regisztracio">Regisztráció</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("bejelentkezes").addEventListener("click", function() {
+            document.getElementById("container").classList.add("active");
+        });
+
+        document.getElementById("regisztracio").addEventListener("click", function() {
+            document.getElementById("container").classList.remove("active");
+        });
+    </script>
+</body>
+</html>

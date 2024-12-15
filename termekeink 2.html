@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mambacss.css" >
+    <link rel="stylesheet" href="termekekcss.css" >
+    <title>MAMBA Cosmetics - Termékek</title>
+    <style>
+      
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+        transform: scale(1.05); 
+    }
+        
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 2px solid #000000;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+            text-align: center;
+        }
+        #close-popup {
+    background-color: black; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+#close-popup:hover {
+    background-color: darkgray; 
+}
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            opacity: 0; 
+        transition: opacity 0.3s ease; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mambacosm.html">Kezdőlap</a></li>
+                <li><u><a href="termekeink 2.html">Termékeink</a></u></li>
+                <li><a href="bejelentkezes.html">Bejelentkezés</a></li>
+                <li><a href="ajanlatok2.html">Ajánlatok</a></li>
+            </ul>
+        </nav>
+        <div class="socials">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"class="responsive"/></a>
+            <a href="#"><img src="pinterest-icon.png" alt="Pinterest" class="responsive"/></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram" class="responsive"/></a>
+            <a href="mambakosaram.html"><img src="cart-icon.png" alt="Kosár" class="responsive"/></a>
+        </div>
+    </header>
+    <main>
+        <h1>Termékek:</h1>
+        <div class="product-list">
+            <div class="product">
+                <img src="godsfruit.png" alt="Termék 1">
+                <h2>God's Fruit 4 in 1 wonder cream</h2>
+                <p>Ár: 105,990 Ft</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="themamba.png" alt="Termék 2">
+                <h2>The Mamba face wash 100ml</h2>
+                <p>Ár: 67,990 Ft</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="themambatoner.png" alt="Termék 3">
+                <h2>The Mamba toner 100ml for all skin types</h2>
+                <p>Ár: 45,490 Ft</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="blackmamba.png" alt="Termék 4">
+                <h2>Black Mamba spf50+ 50ml</h2>
+                <p>Ár: 26,490 Ft</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+        </div>
+      
+    <div id="overlay"></div>
+
+
+    <div id="popup">
+        <p>A terméket a kosárba tetted!</p>
+        <button id="close-popup">Bezár</button>
+    </div>
+        <div class="product-list">
+            <div class="product">
+                <img src="snakebite.png" alt="Parfüm 1">
+                <h2>Snake Bite 30ml</h2>
+                <p>Ár: 79,990 Ft</p>
+                <p>Egységár: 1,999 Ft/50 ml</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="venom.png" alt="Parfüm 2">
+                <h2>Venom 30ml</h2>
+                <p>Ár: 78,490 Ft</p>
+                <p>Egységár: 1,698 Ft/1 ml</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="mambalicious.png" alt="Parfüm 3">
+                <h2>Mambalicious! 30ml</h2>
+                <p>Ár: 77,490 Ft</p>
+                <p>Egységár: 1,498 Ft/1 ml</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+            <div class="product">
+                <img src="pythonelixir.jpeg" alt="Parfüm 4">
+                <h2>Python Elixir 30ml</h2>
+                <p>Ár: 80,490 Ft</p>
+                <p>Egységár: 2,098 Ft/1 ml</p>
+                <button class="add-to-cart">Kosárba</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h3 align="left">Nyitvatartás:</h3>
+        <ul align="left">
+            <li>Hétfő-Péntek: 9:00 - 18:00</li>
+            <li>Szombat: 10:00 - 16:00</li>
+            <li>Vasárnap: Zárva</li>
+            <li>Ünnepnapokon is nyitva!</li>
+        </ul>
+        <div class="message-box" align="center">
+        <h4 align="center">Üzenj egy kollégánknak!</h4>
+        <textarea rows="4" align="center" placeholder="Írd ide a kérdésed..."></textarea>
+        <button class="send-message" align="center">Elküld</button>
+    </div>
+        <p>&copy; 2024 MAMBA Cosmetics kft. Minden jog fenntartva. <a href="privacypolicy 1.html">Privacy Policy</a></p>
+        
+    </footer>
+    <script>
+         
+
+    buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const product = event.target.getAttribute('data-product');
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            
+            if (!cart.includes(product)) {
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            
+            const popup = document.getElementById('popup');
+            const overlay = document.getElementById('overlay');
+            const closeButton = document.getElementById('close-popup');
+            
+            overlay.style.display = 'block';
+            popup.style.display = 'block';
+            
+            setTimeout(() => {
+                overlay.style.opacity = '1';
+                popup.style.opacity = '1';
+            }, 10); 
+    });
+    });
+    const closePopup = () => {
+        const overlay = document.getElementById('overlay');
+        const popup = document.getElementById('popup');
+        
+        overlay.style.opacity = '0';
+        popup.style.opacity = '0';
+
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            popup.style.display = 'none';
+        }, 300); 
+    };
+
+    const closeButton = document.getElementById('close-popup');
+    const overlay = document.getElementById('overlay');
+
+    closeButton.addEventListener('click', closePopup);
+    overlay.addEventListener('click', closePopup);
+</script>
+    
+    
+   
+</body>    
+    
